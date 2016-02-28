@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#showajaxusers').show();
+
+  $('#button').click ->
+	  $.ajax
+	    url: '/users'
+	    type: 'GET'
+	    dataType: 'json'
+	    success: (data) ->
+	      console.log(data)
+	      # append data to your page
+	      return
