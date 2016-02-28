@@ -1,7 +1,11 @@
+%p
+  Download:
+  = link_to "CSV", users_path(format: "csv")  |
+  = link_to "Excel", users_path(format: "xls") 
 %table#showajaxusers.table.table-striped.table-hover
   %thead
     %tr
-      %th Username
+      %th name
       %th Imagecount
       %th UserImages
   %tbody
