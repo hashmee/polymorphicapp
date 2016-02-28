@@ -1,2 +1,18 @@
-%h2
-  this is the table for users to list their images and image count and the user name
+%h1
+  Users Table
+%table.table.table-striped.table-hover
+  %thead
+    %tr
+      %th Username
+      %th Imagecount
+      %th UserImages
+  %tbody
+  - @users.each do |user|
+    %tr
+      %td
+        = user.name
+      %td
+        = user.images.count
+        - user.images.each do |image|
+          %td
+            [#{image.name}] 
